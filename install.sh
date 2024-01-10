@@ -28,7 +28,7 @@ sudo apt update
 
 sudo apt install -y terminator copyq plocate google-cloud-cli docker-ce \
                     docker-ce-cli containerd.io docker-buildx-plugin \
-                    docker-compose-plugin kubectl
+                    docker-compose-plugin kubectl jq
 sudo snap install --classic code intellij-idea-community goland kotlin
 sudo snap install android-studio postman
 
@@ -37,6 +37,9 @@ sudo usermod -aG docker $USER
 
 echo "Please log out and log back in to use docker without sudo"
 read -p "Press enter to continue"
+
+# install go
+./install_go.sh
 
 # add bash_profile to .bashrc
 add_bash_profile_command=". ~/github/setup/.bash_profile"
